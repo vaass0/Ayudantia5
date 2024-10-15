@@ -58,7 +58,7 @@ public class Sistema {
             System.out.println("\n=== Gestión de Libros ===");
             System.out.println("1. Agregar Libro");
             System.out.println("2. Eliminar Libro");
-            System.out.println("3. Buscar Libro");
+            System.out.println("3. Buscar  Libros");
             System.out.println("4. Volver al Menú Principal");
             System.out.print("Selecciona una opción: ");
             opcionLibros = scanner.nextInt();
@@ -224,7 +224,7 @@ public class Sistema {
                     break;
                 case 2:
                     System.out.println("Ingrese nombre categoria: ");
-                    String nombre1 = scanner.nextLine();
+                    String nombre1 = scanner.next();
                     System.out.println("1.Agregar Libro");
                     System.out.println("2.Eliminar Libro");
                     int op = scanner.nextInt();
@@ -272,29 +272,26 @@ public class Sistema {
         } while (opcionCategorias != 4);
     }
     public static Libro crearLibro(Scanner scanner){
-        System.out.print("Ingrese titulo del libro: ");
-        String titulo = scanner.nextLine();
-        System.out.println();
-        System.out.print("Ingrese autor del libro: ");
-        String autor = scanner.nextLine();
-        System.out.println();
-        System.out.print("Ingrese isbn: ");
-        String isbn = scanner.nextLine();
-        System.out.println();
-        System.out.print("Ingrese año de publicacion: ");
+        System.out.println("Ingrese titulo del libro: ");
+        String titulo = scanner.next();
+        System.out.println("Ingrese autor del libro: ");
+        String autor = scanner.next();
+        System.out.println("Ingrese isbn: ");
+        String isbn = scanner.next();
+        System.out.println("Ingrese año de publicacion: ");
         int publicacion = scanner.nextInt();
         Libro libro = new Libro(titulo,autor,isbn,publicacion);
         return libro;
     }
     public static Empleado crearEmpleado(Scanner scanner){
         System.out.print("Ingrese nombre: ");
-        String nombre = scanner.nextLine();
+        String nombre = scanner.next();
         System.out.println();
         System.out.print("Ingrese identificador : ");
-        String identificador = scanner.nextLine();
+        String identificador = scanner.next();
         System.out.println();
         System.out.print("Ingrese cargo: ");
-        String cargo = scanner.nextLine();
+        String cargo = scanner.next();
         Empleado empleado = new Empleado(nombre,identificador,cargo);
         return empleado;
     }
