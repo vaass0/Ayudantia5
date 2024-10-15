@@ -31,9 +31,9 @@ public class Usuario {
 		this.identificacion = identificacion;
 	}
 
-	public boolean realizarPrestamo() {
-		// TODO - implement Usuario.realizarPrestamo
-		throw new UnsupportedOperationException();
+	public boolean realizarPrestamo(Prestamo prestamo) {
+		prestamos.add(prestamo);
+		return true;
 	}
 
 	public void verMultas() {
